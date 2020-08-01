@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #202020;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.WeightChartView">
+    <children>
+        <BarChart fx:id="barChart" layoutX="29.0" layoutY="14.0" prefHeight="522.0" prefWidth="731.0">
+            <xAxis>
+                <CategoryAxis fx:id="months" side="BOTTOM" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="weight" prefHeight="359.0" prefWidth="0.0" side="LEFT" />
+            </yAxis>
+        </BarChart>
+    </children>
+</AnchorPane>

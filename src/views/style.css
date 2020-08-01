@@ -1,0 +1,59 @@
+.button {
+    -fx-border-color: rgba(0,0,0,0);
+    -fx-background-color: rgba(11,156,49,1);
+    -fx-text-fill: white;
+    -fx-background-radius: 0px;
+    -fx-border-radius: 0px;
+}
+
+.label {
+    -fx-color-label-visible: rgba(65,74,76,1);
+}
+
+.check-box {
+    -fx-background-color:  rgba(240,255,255, 1);
+}
+
+.goodLabel{
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-background-color: #1e90ff;
+}
+
+.imgPane{
+    -fx-padding: 10;
+    -fx-background-color: firebrick;
+    -fx-background-radius: 50%;
+    -fx-border-radius: 50%;
+}
+
+.imgView{
+    -fx-background-radius: 50%;
+    -fx-border-radius: 50%;
+}
+
+.theHBox{
+    -fx-background-color: rgba(46, 49, 48, 0.9);
+    -fx-border-color: #00ad0b;
+}
+
+.myComboBox{
+    -fx-background-color: white;
+    -fx-border-color: black;
+}
+
+.myTextField{
+    -fx-background-color: white;
+    -fx-border-color: black;
+}
+
+.myTextArea{
+    -fx-background-color: white;
+    -fx-border-color: black;
+}
+
+.col{
+    -fx-background-color: rgba(46, 49, 48, 0.9);
+    -fx-text-fill: white;
+    -fx-border-color: black;
+}
