@@ -35,7 +35,7 @@ public class LoginView implements Initializable {
 
         try {
 
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "root");
 
             if(doctorCheckBox.isSelected()){
                 String sql = "SELECT * FROM doctors WHERE email = ?";
