@@ -52,7 +52,7 @@ public class NewVisitView implements ControllerClass, Initializable {
         Doctor selectedDoctor = doctorNameComboBox.getSelectionModel().getSelectedItem();
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "root");
 
             String sql = "INSERT INTO visits (issue, issueDescription, patientID, doctorID) VALUES (?,?,?,?)";
 
@@ -92,7 +92,7 @@ public class NewVisitView implements ControllerClass, Initializable {
         ObservableList<Doctor> doctorObservableList = FXCollections.observableArrayList();;
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "root");
 
             String sql = "SELECT * FROM doctors WHERE speciality=?";
 

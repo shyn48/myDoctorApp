@@ -43,7 +43,7 @@ public class Patient extends  Person{
         PreparedStatement ps = null;
 
         try{
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false","root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false","root", "root");
 
             String sql = "UPDATE patients SET weight=? WHERE patientID=?";
 
@@ -70,7 +70,7 @@ public class Patient extends  Person{
         PreparedStatement preparedStatement = null;
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "root");
 
             String sql = "INSERT INTO patients (firstName, lastName, email, birthday, imageFile, password, salt, gender, weight)" + "VALUES (?,?,?,?,?,?,?,?,?)";
 
@@ -107,7 +107,7 @@ public class Patient extends  Person{
         int id = 0;
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "root");
 
             String sql = "SELECT patientID FROM patients WHERE email=?";
 
@@ -140,7 +140,7 @@ public class Patient extends  Person{
         PreparedStatement preparedStatement = null;
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "root");
 
             String sql = "UPDATE patients SET firstName = ?, lastName = ?, email = ?, birthday = ?, imageFile = ?" + "WHERE patientID = ?";
 

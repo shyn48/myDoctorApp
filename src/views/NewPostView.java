@@ -46,7 +46,7 @@ public class NewPostView implements ControllerClass {
         PreparedStatement preparedStatement = null;
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "root");
 
             String sql = "INSERT INTO socialSpace (postSubject, postDescription) VALUES (?,?)";
 

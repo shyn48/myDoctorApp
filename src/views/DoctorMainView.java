@@ -83,7 +83,7 @@ public class DoctorMainView implements ControllerClass, Initializable {
         ResultSet resultSet = null;
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "root");
 
             String sql = "SELECT * FROM visits WHERE doctorID=? AND wasReplied=false";
 

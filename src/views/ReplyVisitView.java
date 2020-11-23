@@ -48,7 +48,7 @@ public class ReplyVisitView implements ControllerClass{
         DB f = new DB();
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "root");
 
             String sql = "INSERT INTO messages (subject, description, senderID, receiverID, isTheSenderADoctor) VALUES (?,?,?,?,?)";
 
@@ -81,7 +81,7 @@ public class ReplyVisitView implements ControllerClass{
         PreparedStatement preparedStatement = null;
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "root");
 
             String sql = "UPDATE visits SET wasReplied=? WHERE visitID=?";
 
@@ -111,7 +111,7 @@ public class ReplyVisitView implements ControllerClass{
         ResultSet resultSet = null;
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "root");
 
             String sql = "SELECT * FROM visits WHERE visitID=?";
 

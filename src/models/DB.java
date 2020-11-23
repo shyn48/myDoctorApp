@@ -12,7 +12,7 @@ public class DB {
         String fullName = "";
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "root");
 
             String sql = "SELECT firstName, lastName FROM doctors WHERE doctorID=?";
 
@@ -45,7 +45,7 @@ public class DB {
         String fullName = "";
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "root");
 
             String sql = "SELECT firstName, lastName FROM patients WHERE patientID=?";
 
@@ -80,7 +80,7 @@ public class DB {
         Patient patient = null;
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "root");
 
             String sql = "SELECT * FROM patients WHERE patientID=?";
 
@@ -122,7 +122,7 @@ public class DB {
         int id = 0;
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "root");
             String sql;
             if (!isDoctor){
                 sql = "SELECT doctorID FROM doctors WHERE email=?";
@@ -157,7 +157,7 @@ public class DB {
     }
 
     public void insertOutDatedDrugToDelayedDrugTable() {
-        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "Codename48"); Statement statement = conn.createStatement()) {
+        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "root"); Statement statement = conn.createStatement()) {
 
             statement.executeUpdate("INSERT INTO delayedDrugs (SELECT drugName, amount, patientID FROM drugs WHERE now() >= drugTime and curdate() >= drugDate)");
 
@@ -167,7 +167,7 @@ public class DB {
     }
 
     public void deleteOutDatedDrug() {
-        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "Codename48"); Statement statement = conn.createStatement()) {
+        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "root"); Statement statement = conn.createStatement()) {
 
             statement.executeUpdate("delete from drugs where now() >= drugTime and curdate() >= drugDate;");
 
@@ -180,7 +180,7 @@ public class DB {
         try {
             Connection conn = null;
             PreparedStatement preparedStatement = null;
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "root");
 
             String sql = "DELETE FROM drugs WHERE drugName=? AND patientID=?;";
 
@@ -202,7 +202,7 @@ public class DB {
         try {
             Connection conn = null;
             PreparedStatement preparedStatement = null;
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "root");
 
             String sql = "DELETE FROM delayedDrugs WHERE drugName=? AND patientID=?;";
 

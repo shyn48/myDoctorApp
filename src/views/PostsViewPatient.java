@@ -87,7 +87,7 @@ public class PostsViewPatient implements ControllerClass {
         ResultSet resultSet = null;
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "root");
 
             String sql = "UPDATE socialSpace SET postLiked = postLiked + 1 WHERE postID =?";
 
@@ -130,7 +130,7 @@ public class PostsViewPatient implements ControllerClass {
         ResultSet resultSet = null;
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "root");
 
             String sql = "SELECT * FROM socialSpace";
 

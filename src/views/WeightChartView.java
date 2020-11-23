@@ -48,7 +48,7 @@ public class WeightChartView implements ControllerClass, Initializable {
         ResultSet resultSet = null;
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp", "root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp", "root", "root");
 
             statement = conn.createStatement();
 

@@ -75,7 +75,7 @@ public class DrugsTableView implements ControllerClass, Initializable {
         ResultSet resultSet = null;
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root","Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root","root");
 
             statement = conn.createStatement();
 

@@ -61,7 +61,7 @@ public class NewMsgView implements ControllerClass {
         DB f = new DB();
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "root");
 
             String sql = "INSERT INTO messages (subject, description, senderID, receiverID, isTheSenderADoctor) VALUES (?,?,?,?,?)";
 

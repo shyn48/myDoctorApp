@@ -82,7 +82,7 @@ public class viewMsgView implements ControllerClass {
         ResultSet resultSet = null;
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "root");
 
             String sql = "SELECT * FROM messages WHERE receiverID=? and isTheSenderADoctor=false ";
 

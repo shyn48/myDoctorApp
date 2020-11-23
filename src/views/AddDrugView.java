@@ -60,7 +60,7 @@ public class AddDrugView implements ControllerClass, Initializable {
         Time time = Time.valueOf(timeTextField.getText());
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "root");
 
             String sql = "INSERT INTO drugs (drugName, amount, drugDate, patientID, drugTime) VALUES (?,?,?,?,?)";
 

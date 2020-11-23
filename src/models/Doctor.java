@@ -118,7 +118,7 @@ public class Doctor extends Person {
         PreparedStatement preparedStatement = null;
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "root");
 
             String sql = "INSERT INTO doctors (firstName, lastName, email, birthday, imageFile, password, salt, cardPicture, speciality)" + "VALUES (?,?,?,?,?,?,?,?,?)";
 
@@ -155,7 +155,7 @@ public class Doctor extends Person {
         int id = 0;
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "root");
 
             String sql = "SELECT doctorID FROM doctors WHERE email=?";
 
@@ -187,7 +187,7 @@ public class Doctor extends Person {
         PreparedStatement preparedStatement = null;
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root", "root");
 
             String sql = "UPDATE doctors SET firstName = ?, lastName = ?, email = ?, birthday = ?, imageFile = ?" + "WHERE doctorID = ?";
 

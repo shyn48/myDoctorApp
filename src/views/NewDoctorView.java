@@ -140,7 +140,7 @@ public class NewDoctorView implements Initializable {
         boolean isThereADuplicate = false;
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root","Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false", "root","root");
 
             String sql = "SELECT email FROM doctors WHERE doctors.email =? UNION ALL SELECT email FROM patients WHERE patients.email =?;";
 

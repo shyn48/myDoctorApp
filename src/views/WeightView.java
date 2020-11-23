@@ -73,7 +73,7 @@ public class WeightView implements ControllerClass, Initializable {
         PreparedStatement ps = null;
 
         try{
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false","root", "Codename48");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doctorApp?useSSL=false","root", "root");
 
             String sql = "INSERT INTO weightData (patientID, weight, dateSubmitted) VALUES (?,?,?)";
 
